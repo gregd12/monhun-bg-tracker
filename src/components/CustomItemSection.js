@@ -24,7 +24,7 @@ function CustomItemSection(props) {
 
     const renderItems = () => {
         const results = [];
-        const size = items && items.length || 0;
+        const size = items ? items.length : 0;
         if (size > 0) {
             for (let i = 0; i < items.length; i++) {
                 const item = items[i];
