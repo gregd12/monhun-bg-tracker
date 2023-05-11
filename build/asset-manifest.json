@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/monhun-bg-trackers/static/css/main.2836962b.css",
+    "main.js": "/monhun-bg-trackers/static/js/main.071f124e.js",
+    "static/js/787.be1fa32c.chunk.js": "/monhun-bg-trackers/static/js/787.be1fa32c.chunk.js",
+    "index.html": "/monhun-bg-trackers/index.html",
+    "main.2836962b.css.map": "/monhun-bg-trackers/static/css/main.2836962b.css.map",
+    "main.071f124e.js.map": "/monhun-bg-trackers/static/js/main.071f124e.js.map",
+    "787.be1fa32c.chunk.js.map": "/monhun-bg-trackers/static/js/787.be1fa32c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2836962b.css",
+    "static/js/main.071f124e.js"
+  ]
+}
