@@ -2,7 +2,7 @@
   "name": "monhun-bg-online",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gregd12.github.io/monhun-bg-trackers",
+  "homepage": "https://gregd12.github.io/monhun-bg-tracker",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
