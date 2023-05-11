@@ -1,0 +1,38 @@
+.SpinnerField {
+    /* HIDE ARROWS */
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+
+    > input.Button {
+        background-color: rgba(77, 35, 28, 0.1);
+        text-align: center;
+        font-weight: bold;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin: auto;
+    }
+
+    > input[type="number"] {
+        text-align: center;
+        width: 40px;
+    }
+
+    .filler {
+        flex-grow: 1;
+    }
+}

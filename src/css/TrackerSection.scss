@@ -1,0 +1,35 @@
+.TrackerSection {
+    width: 100%;
+
+    &._collapsible > ._header {
+        cursor: pointer;
+
+        label {
+            cursor: inherit;
+        }
+    }
+
+    & > ._header {
+        width: 100%;
+        padding: 10px 5px;
+        border-top: 1px solid rgb(88, 84, 74);
+
+        .FieldLabel {
+            margin-right: 6px;
+        }
+
+        & > ._right {
+            text-align: right;
+        }
+    }
+
+    & > ._body {
+        width: 100%;
+        border-top: 1px solid rgb(88, 84, 74);
+
+        .InputField {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}

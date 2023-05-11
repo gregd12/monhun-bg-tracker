@@ -1,0 +1,207 @@
+.CampaignTracker {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(88, 84, 74);
+    font-weight: 500;
+    font-size: 11pt;
+
+    .TabBar {
+        width: 100%;
+        text-align: left;
+        margin-bottom: -1px;
+        background-color: transparent;
+
+        .TabPicker {
+            opacity: 0.7;
+            text-align: center;
+            padding: 6px 10px 4px;
+            min-width: 50px;
+            border-style: solid;
+            border-width: 1px 0 0 1px;
+            border-color: rgb(117, 112, 99);
+            border-radius: 4px 4px 0 0;
+            background-color: rgb(241, 233, 218);
+            cursor: pointer;
+
+            &._active {
+                padding-top: 8px;
+                opacity: 1;
+                background-color: rgb(252, 250, 239);
+                border-bottom-color: transparent;
+                border-bottom-width: 1px;
+                z-index: 1;
+                position: sticky;
+                color:rgb(88, 84, 74)
+            }
+
+            &:last-child {
+                border-right-width: 1px;
+            }
+
+            span {
+                cursor: inherit;
+            }
+        }
+    }
+
+    .CampaignTab {
+        width: 100%;
+        background-color: rgb(241, 233, 218);
+        font-size: 11pt;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(117, 112, 99);
+        border-radius: 1px;
+        text-align: left;
+        background-color: rgb(252, 250, 239);
+
+        ._body  {
+            padding: 10px 7px;
+            .InputField {
+                width: 100%;
+            }
+        }
+    }
+
+    .CampaignCalendar { 
+        width: 100%;
+
+        ._body {
+            padding: 0;
+        }
+
+        table {
+            display: table;
+            width: 100%;
+            padding: 0;
+            border-spacing: 0;
+            border-collapse: collapse;
+
+            tr {
+                margin: 0;
+
+                &:last-child td {
+                    border-bottom-width: 0;
+                }
+            }
+
+            td {
+                width: 10%;
+                padding: 0;
+                font-size: 12pt;
+                font-weight: bold;
+                text-align: center;
+                border-color: rgba(117, 112, 99, 0.7);
+                border-style: solid;
+                border-width: 0 1px 1px 0;
+
+                &:last-child {
+                    border-right-width: 0;
+                }
+
+                &.current span {
+                    border: 3px dashed rgb(150, 0, 0);;
+                    border-radius: 100px;
+                    margin: -3px 0;
+                }
+
+                &:not(.current) span:hover {
+                    border: 3px dashed rgba(150, 0, 0, 0.5);
+                    border-radius: 100px;
+                    margin: -3px 0;
+                    cursor: pointer;
+                }
+
+                &.complete {
+                    background-color:rgba(77, 35, 28, 0.1);
+                    color:rgba(117, 112, 99, 0.7);
+                }
+
+                span {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    padding: 10%;
+                }
+            }
+        }
+    }
+    
+    ._header {
+        padding: 10px 7px;
+        width: 100%;
+
+        .InputField {
+            margin: 0 5px 8px 0;
+            border-bottom: 1px dashed rgb(197, 189, 170);
+
+            input {
+                height: 20px;
+                border-radius: 2px;
+                font-size: 11pt;
+                font-style: italic;
+            }
+
+            .FieldLabel {
+                margin: auto 5px auto auto;
+            }
+        }
+
+        ._right,
+        ._left {
+            padding: 0 7px; // might need adjustment later
+        }
+    }
+
+    ._body {
+        width: 100%;
+    }
+
+    .Button {
+        background: none;
+        border: none;
+        padding: 0;
+        color: rgb(117, 112, 99);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 9pt;
+        font-style: italic;
+        opacity: 0.6;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .InputField {
+        input {
+            border: none;
+
+            &:focus {
+                outline: none;
+                background: rgba(65, 65, 65, 0.1);
+            }
+
+            &[type="text"] {
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .CounterField {
+        input {
+            text-align: right;
+
+            &[type="number"] {
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
+                    opacity: 0.7;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

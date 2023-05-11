@@ -1,0 +1,34 @@
+.CustomItem {
+    display: flex;
+    font-size: 10pt;
+    border-style: solid;
+    border-color: rgb(117, 112, 99);
+    border-width: 0 0 1px 0;
+
+    &.CustomCounterItem {
+        &._left {
+            border-right-width: 1px;
+        }
+
+        .CustomItem_name {
+            border-right: 1px solid rgb(117, 112, 99);
+        }
+    }
+
+    &._left {
+        float: left;
+        &:not(.CustomCounterItem) {
+            border-right: 1px solid rgb(117, 112, 99);
+        }
+    }
+
+    .CustomItem_name {
+        padding: 5px 0;
+        flex-grow: 1;
+
+        input::placeholder {
+            opacity: 0.5;
+            font-style: italic;
+        }
+    }
+}

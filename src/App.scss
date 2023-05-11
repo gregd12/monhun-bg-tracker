@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(209, 204, 185);
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+div._left {
+  width: 50%;
+}
+
+div._right {
+  width: 50%;
+}
+
+.FieldLabel {
+  font-weight: 600;
+  color: rgb(88, 84, 74);
+}
+
+.InputField {
+
+  ._left &,
+  ._right & {
+    width: 100%;
+    display: flex;
+
+    input[type="text"] {
+      flex-grow: 1;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: rgb(117, 112, 99);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}

@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+import CampaignTracker from './components/CampaignTracker';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CampaignTracker 
+        campaign={{campaignDays: 30, days: [{number: 1, complete: true}]}}
+        hunters={[{hunterName: 'Frost'}]}
+      />
     </div>
   );
 }
