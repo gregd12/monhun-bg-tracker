@@ -1,0 +1,10 @@
+$font-color: rgb(88, 84, 74);
+$label-color: $font-color;
+$input-color: lighten($font-color, 10%);
+$border-color: lighten($font-color, 30%);
+$foreground-color: rgb(252, 250, 239);
+$bg-color: rgb(209, 204, 185);
+$button-color: lighten($font-color, 50%);
+$font-size-normal: 12pt;
+$font-size-larger: 13pt;
+$font-size-smaller: 10pt;

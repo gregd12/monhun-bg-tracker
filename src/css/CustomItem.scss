@@ -1,30 +1,29 @@
+@import 'include';
+
 .CustomItem {
     display: flex;
-    font-size: 10pt;
+    font-size: $font-size-normal;
     border-style: solid;
-    border-color: rgb(117, 112, 99);
+    border-color: $border-color;
     border-width: 0 0 1px 0;
 
     &.CustomCounterItem {
-        &._left {
-            border-right-width: 1px;
-        }
-
         .CustomItem_name {
-            border-right: 1px solid rgb(117, 112, 99);
+            border-right: 1px solid $border-color;
         }
     }
 
     &._left {
         float: left;
-        &:not(.CustomCounterItem) {
-            border-right: 1px solid rgb(117, 112, 99);
-        }
     }
 
     .CustomItem_name {
         padding: 5px 0;
         flex-grow: 1;
+
+        input {
+            font-size: $font-size-normal;
+        }
 
         input::placeholder {
             opacity: 0.5;

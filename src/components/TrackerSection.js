@@ -15,12 +15,10 @@ function TrackerSection(props) {
         <div className={`TrackerSection ${className || ''} ${collapsible ? '_collapsible' : ''}`} >
             { title &&  (
                 <div className="_header" onClick={toggleCollapsed}>
-                    <div className="_left">
-                        <FieldLabel text={title} />
-                    </div>
+                    <FieldLabel text={title} />
                     { collapsible && ( 
-                        <div className="_right">
-                            <Button className="CollapseButton" text={collapsed ? 'Expand' : 'Collapse'} onClick={toggleCollapsed} />
+                        <div className="_fill">
+                            <Button className="CollapseButton" text={collapsed ? 'Show' : 'Hide'} onClick={toggleCollapsed} />
                         </div>
                     )}
                 </div>

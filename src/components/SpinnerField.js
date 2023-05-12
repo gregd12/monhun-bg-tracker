@@ -16,17 +16,18 @@ function SpinnerField(props) {
     return (
         <div className={`SpinnerField InputField ${props.className || ''}`}>
             { label && <FieldLabel fieldName={fieldName} text={label} /> }
-            <Button className="down" onClick={() => handleChange(parseInt(value) - 1)} text=" - " />
-            <input 
-                type="number"
-                id={fieldName}
-                name={fieldName}
-                readOnly={readOnly}
-                value={value}
-                onChange={e => handleChange(e.target.value)}
-            />
-            <Button className="up" onClick={() => handleChange(parseInt(value) + 1)} text=" + " />
-            <div className="filler"></div>
+            <div className="SpinnerInput" >
+                <Button className="down" onClick={() => handleChange(parseInt(value) - 1)} text=" - " />
+                <input 
+                    type="number"
+                    id={fieldName}
+                    name={fieldName}
+                    readOnly={readOnly}
+                    value={value}
+                    onChange={e => handleChange(e.target.value)}
+                />
+                <Button className="up" onClick={() => handleChange(parseInt(value) + 1)} text=" + " />
+            </div>
         </div>
     );
 }

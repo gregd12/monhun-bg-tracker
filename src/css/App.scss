@@ -1,0 +1,52 @@
+@import 'include';
+
+body {
+  background-color: $bg-color;
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.FieldLabel {
+  font-weight: 600;
+  color: $label-color;
+}
+
+div._left, div._right {
+  width: 100%;
+
+  &._split {
+    width: 50%;
+  }
+}
+
+._fill {
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 768px) {
+
+  ._body > ._left  {
+    border-right: 1px solid $border-color
+  }
+
+  div._left {
+    width: 50%;
+  }
+
+  div._right {
+    width: 50%;
+  }
+}

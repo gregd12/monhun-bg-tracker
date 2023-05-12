@@ -1,0 +1,19 @@
+@import 'include';
+
+.InputField {
+
+    ._left &,
+    ._right & {
+        display: flex;
+
+        input[type="text"] {
+            flex-grow: 1;
+        }
+    }
+
+    input {
+        background-color: transparent;
+        color: $input-color;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
