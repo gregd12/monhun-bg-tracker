@@ -1,3 +1,5 @@
+@import 'include';
+
 .TrackerSection {
     width: 100%;
 
@@ -12,24 +14,32 @@
     & > ._header {
         width: 100%;
         padding: 10px 5px;
-        border-top: 1px solid rgb(88, 84, 74);
+        border-top: 1px solid $border-color;
+        display: flex;
 
         .FieldLabel {
             margin-right: 6px;
         }
 
-        & > ._right {
+        & > ._fill {
             text-align: right;
         }
     }
 
     & > ._body {
         width: 100%;
-        border-top: 1px solid rgb(88, 84, 74);
+        border-top: 1px solid $border-color;
 
         .InputField {
             padding-left: 5px;
             padding-right: 5px;
+        }
+
+        .SpinnerInput {
+            padding: 3px 0;
+            input[type="number"] {
+                font-size: $font-size-larger;
+            }
         }
     }
 }

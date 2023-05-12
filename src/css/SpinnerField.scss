@@ -1,3 +1,5 @@
+@import 'include';
+
 .SpinnerField {
     /* HIDE ARROWS */
     /* Chrome, Safari, Edge, Opera */
@@ -13,26 +15,28 @@
         appearance: textfield;
     }
 
-    label {
+    .FieldLabel {
         margin-right: 5px;
-    }
-
-    > input.Button {
-        background-color: rgba(77, 35, 28, 0.1);
-        text-align: center;
-        font-weight: bold;
-        width: 20px;
-        height: 20px;
-        border-radius: 3px;
-        margin: auto;
-    }
-
-    > input[type="number"] {
-        text-align: center;
-        width: 40px;
-    }
-
-    .filler {
         flex-grow: 1;
+    }
+
+    .SpinnerInput { 
+        input.Button {
+            background-color: $button-color;
+            text-align: center;
+            font-weight: bold;
+            width: 26px;
+            height: 26px;
+            border-radius: 3px;
+            margin: auto;
+        }
+
+        input[type="number"] {
+            text-align: center;
+            width: 40px;
+            display: inline-block;
+            height: 26px;
+            padding: 0;
+        }
     }
 }

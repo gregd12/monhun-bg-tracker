@@ -8,6 +8,7 @@ import { getOrCreateCampaign, saveCampaign } from '../data';
 import GatheringTracker from "./GatheringTracker";
 
 const FIRST_HUNTER_TAB = 1;
+const CALENDAR_DAYS_PER_ROW = 5;
 
 // todo: gathering phase tracker
 // todo: phone support
@@ -75,7 +76,7 @@ function CampaignTracker(props) {
 
     const renderHunterTabPicker = (tabIndex, hunterIndex) => {
         const hunter = hunters[hunterIndex] || {};
-        const name = hunter.hunterName || `Hunter ${hunterIndex + 1}`;
+        const name = `H${hunterIndex + 1}`;
         return (
             <div 
                 key={tabIndex}
@@ -108,7 +109,7 @@ function CampaignTracker(props) {
         const cells = [];
         for (let day = 1; day <= campaignDays; day++) {
             cells.push(renderCalendarDay(day));
-            if (cells.length === 10) {
+            if (cells.length === CALENDAR_DAYS_PER_ROW) {
                 rows.push(<tr key={rows.length}>{cells.splice(0, cells.length)}</tr>);
             }
         }
@@ -129,7 +130,7 @@ function CampaignTracker(props) {
                 <div className="_header" >
                     <div className="_left">
                         <InputField     label="Campaign Name:"  value={campaignName} onChange={v => up(c => c.campaignName = v)} />
-                        <InputField     label="Goal:"           value={campaignGoal} onChange={v => up(c => c.campaignGoal = v)} />
+                        <InputField     label="Campaign Goal:"           value={campaignGoal} onChange={v => up(c => c.campaignGoal = v)} />
                     </div>
                     <div className="_right">
                         <InputField     label="Campaign Type:"  value={campaignType} onChange={v => up(c => c.campaignType = v)} />
@@ -190,6 +191,14 @@ function CampaignTracker(props) {
         <div className="CampaignTracker" >
             <div className="TabBar" >
                 { renderTabPickers() }
+            </div>
+            {/* <div className="HamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> */}
+            <div className="Title">
+
             </div>
             { renderActiveTab() }
         </div>

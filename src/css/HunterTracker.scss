@@ -1,30 +1,28 @@
+@import 'include';
+
 .HunterTracker {
     width: 100%;
-    font-size: 11pt;
+    font-size: $font-size-normal;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(117, 112, 99);
+    border-color: $border-color;
     border-radius: 1px;
     text-align: left;
-    background-color: rgb(252, 250, 239);
+    background-color: $foreground-color;
 
     .common {
         >._body {
-            ._left .InputField {
-                border-right-width: 1px;
-            }
-
             .InputField {
                 border-style: solid;
-                border-color: rgb(117, 112, 99);
+                border-color: $border-color;
                 border-width: 0 0 1px 0;
 
                 .FieldLabel {
                     padding: 6px 2px;
                     border-style: solid;
-                    border-color: rgb(117, 112, 99);
+                    border-color: $border-color;
                     border-width: 0 1px 0 0;
-                    font-size: 10pt;
+                    font-size: $font-size-normal;
                     font-weight: normal;
                     width: 50%;
                 }
@@ -42,7 +40,7 @@
             background-color: transparent;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-style: italic;
-            color: rgb(117, 112, 99);
+            color: $input-color;
             resize: vertical;
 
             &::placeholder {

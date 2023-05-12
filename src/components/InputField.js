@@ -1,3 +1,4 @@
+import '../css/InputField.scss';
 import React from "react";
 import FieldLabel from './FieldLabel';
 

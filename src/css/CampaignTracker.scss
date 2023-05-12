@@ -1,11 +1,12 @@
+@import 'include';
+
 .CampaignTracker {
     width: 100%;
     max-width: 800px;
-    margin-top: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(88, 84, 74);
+    color: $font-color;
     font-weight: 500;
-    font-size: 11pt;
+    font-size: $font-size-normal;
 
     .TabBar {
         width: 100%;
@@ -14,26 +15,25 @@
         background-color: transparent;
 
         .TabPicker {
-            opacity: 0.7;
+            opacity: 0.6;
             text-align: center;
             padding: 6px 10px 4px;
             min-width: 50px;
             border-style: solid;
             border-width: 1px 0 0 1px;
-            border-color: rgb(117, 112, 99);
+            border-color: $border-color;
             border-radius: 4px 4px 0 0;
-            background-color: rgb(241, 233, 218);
+            background-color: $foreground-color;
             cursor: pointer;
 
             &._active {
-                padding-top: 8px;
                 opacity: 1;
-                background-color: rgb(252, 250, 239);
+                background-color: $foreground-color;
                 border-bottom-color: transparent;
                 border-bottom-width: 1px;
                 z-index: 1;
                 position: sticky;
-                color:rgb(88, 84, 74)
+                color:$label-color;
             }
 
             &:last-child {
@@ -48,14 +48,13 @@
 
     .CampaignTab {
         width: 100%;
-        background-color: rgb(241, 233, 218);
-        font-size: 11pt;
+        font-size: $font-size-normal;
         border-style: solid;
         border-width: 1px;
-        border-color: rgb(117, 112, 99);
+        border-color: $border-color;
         border-radius: 1px;
         text-align: left;
-        background-color: rgb(252, 250, 239);
+        background-color: $foreground-color;
 
         ._body  {
             padding: 10px 7px;
@@ -90,10 +89,10 @@
             td {
                 width: 10%;
                 padding: 0;
-                font-size: 12pt;
+                font-size: $font-size-larger;
                 font-weight: bold;
                 text-align: center;
-                border-color: rgba(117, 112, 99, 0.7);
+                border-color: $border-color;
                 border-style: solid;
                 border-width: 0 1px 1px 0;
 
@@ -121,9 +120,10 @@
 
                 span {
                     display: inline-block;
-                    width: 18px;
-                    height: 18px;
+                    width: 28px;
+                    height: 28px;
                     padding: 10%;
+                    line-height: 28px;
                 }
             }
         }
@@ -135,17 +135,26 @@
 
         .InputField {
             margin: 0 5px 8px 0;
-            border-bottom: 1px dashed rgb(197, 189, 170);
+            border-bottom: 1px dashed transparentize($border-color, 0.3);
 
             input {
                 height: 20px;
                 border-radius: 2px;
-                font-size: 11pt;
+                font-size: $font-size-normal;
                 font-style: italic;
             }
 
             .FieldLabel {
                 margin: auto 5px auto auto;
+            }
+        }
+
+        .SpinnerField {
+            .FieldLabel {
+                flex-grow: 0;
+            }
+            .SpinnerInput {
+                flex-grow: 1;
             }
         }
 
@@ -163,9 +172,9 @@
         background: none;
         border: none;
         padding: 0;
-        color: rgb(117, 112, 99);
+        color: $label-color;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 9pt;
+        font-size: $font-size-smaller;
         font-style: italic;
         opacity: 0.6;
         cursor: pointer;
@@ -202,6 +211,37 @@
                     margin-left: 10px;
                 }
             }
+        }
+    }
+
+    .HamburgerMenu {
+        border: 1px solid $border-color;
+        background-color: $foreground-color;
+        width: 40px;
+        height: 38px;
+        display: block;
+        -webkit-user-select: none;
+        user-select: none;
+        padding: 9px 0 0 7px;
+
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            position: relative;
+            background-color: $font-color;
+            z-index: 1;
+            border-radius: 3px;
+            transform-origin: 4px 0px;
+        }
+
+        span:first-child {
+            transform-origin: 0%;
+        }
+
+        span:nth-last-child(2) {
+            transform-origin: 0% 100%;
         }
     }
 }

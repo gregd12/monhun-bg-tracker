@@ -2,7 +2,7 @@
   "name": "monhun-bg-online",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gregd12.github.io/monhun-bg-trackers",
+  "homepage": "http://12-below.com/monhun-bg-tracker",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,6 +13,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "deploy": "PORT=3002 react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

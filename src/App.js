@@ -1,5 +1,5 @@
 
-import './App.scss';
+import './css/App.scss';
 import CampaignTracker from './components/CampaignTracker';
 
 function App() {
